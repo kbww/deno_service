@@ -25,5 +25,3 @@ listenAndServe({ port: 8080 }, async (req) => {
     }
   }
 });
-
-console.log("Server running on localhost:3000");
