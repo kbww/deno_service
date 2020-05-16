@@ -12,11 +12,11 @@ import { v4 } from "https://deno.land/std/uuid/mod.ts";
   }
   
   export async function chat(ws: WebSocket): Promise<void> {
-    const userId = v4.generate();
-  
+    const rand = Math.floor(Math.random() * Math.floor(10000000));
+    const userId = rand.toString();
     // Register user connection
     users.set(userId, ws);
-    broadcast(`User ${userId} is connected`);
+    broadcast(`User ${userId} connected`);
   
     // Wait for new messages
     for await (const event of ws) {
@@ -27,7 +27,7 @@ import { v4 } from "https://deno.land/std/uuid/mod.ts";
       // Unregister user conection
       if (!message && isWebSocketCloseEvent(event)) {
         users.delete(userId);
-        broadcast(`User ${userId} is disconnected`);
+        broadcast(`User ${userId} disconnected`);
         break;
       }
     }
