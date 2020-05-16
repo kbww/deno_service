@@ -16,7 +16,7 @@ import { v4 } from "https://deno.land/std/uuid/mod.ts";
   
     // Register user connection
     users.set(userId, ws);
-    broadcast(`> User with the id ${userId} is connected`);
+    broadcast(`User ${userId} is connected`);
   
     // Wait for new messages
     for await (const event of ws) {
@@ -27,7 +27,7 @@ import { v4 } from "https://deno.land/std/uuid/mod.ts";
       // Unregister user conection
       if (!message && isWebSocketCloseEvent(event)) {
         users.delete(userId);
-        broadcast(`> User with the id ${userId} is disconnected`);
+        broadcast(`User ${userId} is disconnected`);
         break;
       }
     }

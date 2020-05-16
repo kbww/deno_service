@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
+        <div class="container">
         <div id="app" />
             <script type="module">
             import { html, render, useEffect, useState } from 'https://unpkg.com/htm/preact/standalone.module.js'
@@ -45,14 +46,16 @@
                 ${messages.map(message => html`
                     <div>${message}</div>
                 `)}
-                <form onSubmit=${onSendMessage}>
-                    <input type="text" />
-                    <button>Send</button>
-                </form>
+                <div class="row">
+                    <form onSubmit=${onSendMessage}>
+                        <div class="col-8"><input type="text" /></div>
+                        <div class="col-4"><button>Send</button></div> 
+                    </form>
+                </div>
                 `
             }
-
             render(html`<${Process} />`, document.getElementById('app'))
             </script>
+            </div>
     </body>
 </html>
