@@ -7,7 +7,7 @@ const DEFAULT_PORT = 8080;
 const argPort = flags.parse(Deno.args).port;
 const port = argPort ? Number(argPort) : DEFAULT_PORT;
 
-listenAndServe({ port: port, hostname: '0.0.0.0' }, async (req) => {
+listenAndServe({ port: port }, async (req:any) => {
   if (req.method === "GET" && req.url === "/") {
     req.respond({
       status: 200,
