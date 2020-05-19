@@ -1,4 +1,22 @@
-# Simple chat server built using Deno
+# Guide
+
+## Install deno 
+
+### MacOS
+```
+brew install deno
+```
+
+### Linux
+```
+cargo install deno
+```
+
+### Windows
+
+```
+choco install deno
+```
 
 ## Run using
 
