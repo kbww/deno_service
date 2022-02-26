@@ -1,25 +1,19 @@
 # Guide
 
-## Install deno 
+## Install deno
 
 ### MacOS
-```
-brew install deno
-```
+
+`brew install deno`
 
 ### Linux
-```
-cargo install deno
-```
+
+`cargo install deno`
 
 ### Windows
 
-```
-choco install deno
-```
+`choco install deno`
 
 ## Run using
 
-```
-deno run --allow-net --allow-read server.ts
-```
+`deno run --allow-net --allow-read server.ts`
