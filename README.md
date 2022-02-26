@@ -1,19 +1,21 @@
-# Guide
+# Deno app basic guide
 
-## Install deno
+### Setting up deno
 
-### MacOS
+#### MacOS
 
 `brew install deno`
 
-### Linux
+#### Linux
 
 `cargo install deno`
 
-### Windows
+#### Windows
 
 `choco install deno`
 
-## Run using
+_More install options_ [here](https://github.com/denoland/deno_install)
+
+### Run using
 
 `deno run --allow-net --allow-read server.ts`
